@@ -1,0 +1,1 @@
+select distinct p.email from person p group by email having count(p.email)>1
