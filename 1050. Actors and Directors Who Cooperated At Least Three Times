@@ -1,0 +1,2 @@
+select A.actor_id,A.director_id from ActorDirector A
+group by A.director_id,A.actor_id having count(A.director_id)>=3
