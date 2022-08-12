@@ -1,0 +1,1 @@
+select * from Cinema as C where description!='boring' and C.id%2=1 order by C.rating Desc
