@@ -1,6 +1,10 @@
-class Solution {
-public:
-    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
-        
-    }
-};
+class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        m:int=max(candies)
+        res:list=[]
+        for x in candies:
+            if((x+extraCandies)>=m):
+                res.append(True)
+            else:
+                res.append(False)
+        return res
