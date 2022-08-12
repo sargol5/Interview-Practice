@@ -1,6 +1,12 @@
-class Solution {
-public:
-    int missingNumber(vector<int>& nums) {
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        summ_theory = 0
+        summ_fact = 0
         
-    }
-};
+        for i in range(len(nums)):
+            summ_theory += i
+            summ_fact += nums[i]
+        else:
+            summ_theory += i + 1
+        
+        return summ_theory - summ_fact
