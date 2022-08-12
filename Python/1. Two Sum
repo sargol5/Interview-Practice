@@ -1,0 +1,7 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        sum=0
+        for i in count(nums):
+            if sum+nums[i]==target:
+                return i
+        
