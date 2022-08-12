@@ -1,6 +1,12 @@
-class Solution {
-public:
-    int numJewelsInStones(string jewels, string stones) {
-        
-    }
-};
+class Solution(object):
+    def numJewelsInStones(self, jewels, stones):
+        """
+        :type jewels: str
+        :type stones: str
+        :rtype: int
+        """
+        count=0
+        for i in jewels:
+            count+=stones.count(i)
+        return count
+           
