@@ -1,6 +1,16 @@
-class Solution {
-public:
-    bool wordPattern(string pattern, string s) {
-        
-    }
-};
+from collections import defaultdict
+class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+        s = s.split()
+        if len(pattern) != len(s): return False
+        match = defaultdict(bool)
+        rev_match = defaultdict(bool)
+        for i, c in enumerate(pattern):
+            if not match[c]:
+                if rev_match[s[i]]: return False
+                match[c] = s[i]
+                rev_match[s[i]] = c
+            else:
+                if match[c] != s[i]:
+                    return False
+        return True
