@@ -1,0 +1,3 @@
+Select city.Name From City Inner Join Country 
+On city.CountryCode = country.Code
+Where country.Continent = 'Africa';
