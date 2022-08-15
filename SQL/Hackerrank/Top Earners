@@ -1,0 +1,2 @@
+SELECT max(salary * months) , COUNT(*) from employee where
+salary*months=(select max(salary * months) from employee);
